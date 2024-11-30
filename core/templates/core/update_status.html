@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Status Update</title>
-</head>
-<body>
+{% extends "core/base_staff.html" %}
+{% block title %}Update Request status{% endblock %}
+{% block content %}
     <h1>Update Status for Request {{ service_request.service_id }}</h1>
 
     <!-- Display Customer Information -->
@@ -28,5 +23,4 @@
         </select>
         <button type="submit">Update</button>
     </form>
-</body>
-</html>
+{% endblock %}

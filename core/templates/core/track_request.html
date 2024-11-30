@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track request</title>
-</head>
-<body>
+{% extends "core/base_customer.html" %}
+{% block title %}Track Request{% endblock %}
+{% block content %}
     <h1>Your Requests</h1>
     <table>
         <tr>
@@ -23,6 +18,4 @@
         </tr>
         {% endfor %}
     </table>
-
-</body>
-</html>
+{% endblock %}
