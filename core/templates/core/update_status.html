@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Update</title>
+</head>
+<body>
+    <h1>Update Status for Request {{ service_request.service_id }}</h1>
+
+    <!-- Display Customer Information -->
+    <p><strong>Customer Name:</strong> {{ service_request.customer.name }}</p>
+    <p><strong>Email:</strong> {{ service_request.customer.email }}</p>
+    <p><strong>Address:</strong> {{ service_request.customer.address }}</p>
+
+    <!-- Display Current Status -->
+    <p><strong>Current Status:</strong> {{ service_request.get_status_display }}</p>
+
+    <!-- Update Status Form -->
+    <form method="post">
+        {% csrf_token %}
+        <select name="status">
+            {% for key, value in service_request.STATUS_TYPES %}
+            <option value="{{ key }}" {% if service_request.status == key %}selected{% endif %}>
+                {{ value }}
+            </option>
+            {% endfor %}
+        </select>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

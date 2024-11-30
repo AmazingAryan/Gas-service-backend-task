@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ user.username }}</h1>
+<nav>
+    <a href="{% url 'submit_request' %}">Submit Request</a> | 
+    <a href="{% url 'track_request' %}">Track Requests</a> | 
+    <a href="{% url 'logout' %}">Logout</a>
+</nav>
+</body>
+</html>

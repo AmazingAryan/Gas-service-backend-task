@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track request</title>
+</head>
+<body>
+    <h1>Your Requests</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+        {% for request in requests %}
+        <tr>
+            <td>{{ request.service_id }}</td>
+            <td>{{ request.type_of_service }}</td>
+            <td>{{ request.description }}</td>
+            <td>{{ request.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
