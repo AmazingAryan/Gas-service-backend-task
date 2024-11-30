@@ -58,8 +58,8 @@ This project is a web-based service request management system for a gas utility 
    ```
 
 7. Access the application:
-   - Staff/Admin Dashboard: `http://127.0.0.1:8000/admin/`
-   - Customer Dashboard: `http://127.0.0.1:8000/`
+   - Staff/Admin Dashboard: `http://127.0.0.1:8000/staff/`
+   - Customer Dashboard: `http://127.0.0.1:8000/customer`
 
 ---
 
